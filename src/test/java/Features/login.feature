@@ -17,7 +17,7 @@ Scenario: Facebook Scenario1
 When the title of page is
 |id				|title					|
 |Messenger		|Messenger				|
-|Marketplace	|Facebook Marketplace	|
+|Friends		|Friends				|
 Then close the browser
 
 @thistag

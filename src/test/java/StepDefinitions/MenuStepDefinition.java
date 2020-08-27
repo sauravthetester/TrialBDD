@@ -132,6 +132,11 @@ public class MenuStepDefinition {
 		
 	}
 	
+	@When("^name is available$")
+	public void name_is_available() throws Throwable {
+		Assert.assertTrue(driver.getPageSource().contains("Saurav Ghosh"));
+	}
+	
 	@Then("^close the browser$")
 	public void close_the_browser() throws Throwable {
 		driver.quit();

@@ -31,10 +31,11 @@
 	                <artifactId>maven-surefire-plugin</artifactId>
 	                <version>3.0.0-M4</version>
 					<configuration>
-					<!-- <testSourceDirectory>TrialBDD/src/main/java</testSourceDirectory> --> 
-						<includes>
+						<!-- <includes>
 							<include>**/*Test.java</include>
-						</includes>
+						</includes> -->
+						<parallel>methods</parallel>
+        				<useUnlimitedThreads>true</useUnlimitedThreads>
 					</configuration>
 				</plugin>
 			</plugins>
@@ -86,5 +87,11 @@
     <artifactId>selenium-java</artifactId>
     <version>3.141.59</version>
 </dependency>
-  </dependencies>
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>6.5.1</version>
+</dependency>
+
+</dependencies>
 </project>
