@@ -53,10 +53,8 @@ public class MenuStepDefinition {
 	
 	@When("^title of the login page is Facebook - log in or sign up$")
 	public void title_of_the_login_page_is_Facebook_log_in_or_sign_up() throws Throwable {
-	    // Write code here that turns the phrase above into concrete actions
 		String title = driver.getTitle();
 		Assert.assertEquals("Facebook – log in or sign up", title);
-	    //throw new PendingException();
 	}
 
 	@Then("^username and password entered$")
