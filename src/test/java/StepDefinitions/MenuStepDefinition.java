@@ -83,12 +83,9 @@ public class MenuStepDefinition {
 		System.out.println("Title of home page = "+title);
 		Assert.assertTrue(title.contains("Facebook"));
 		
-		//WebElement shadedLayer = driver.findElement(By.xpath("//div[@class='_3ixn']/.."));
-		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		driver.findElement(By.xpath("//span[text()='See More']")).click();
 		Thread.sleep(2000);
-	    //js.executeScript("arguments[0].setAttribute(arguments[1],arguments[2])", shadedLayer, "style", "opacity: 0; min-width: 40px;");
 	}
 	
 	@When("^the title of page is$")
