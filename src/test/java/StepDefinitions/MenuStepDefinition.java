@@ -76,7 +76,7 @@ public class MenuStepDefinition {
 	}
 	
 	@When("^user is on home page$")
-	public void user_is_on_home_page()
+	public void user_is_on_home_page() throws InterruptedException
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@aria-label='Account']"))));
@@ -89,6 +89,7 @@ public class MenuStepDefinition {
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
 		driver.findElement(By.xpath("//span[text()='See More']")).click();
+		Thread.sleep(2000);
 	    //js.executeScript("arguments[0].setAttribute(arguments[1],arguments[2])", shadedLayer, "style", "opacity: 0; min-width: 40px;");
 	}
 	

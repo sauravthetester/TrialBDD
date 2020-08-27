@@ -11,7 +11,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4048634627,
+              "duration": 4540568159,
               "status": "passed"
             },
             "line": 4,
@@ -23,7 +23,7 @@
           },
           {
             "result": {
-              "duration": 4665411503,
+              "duration": 7663125764,
               "status": "passed"
             },
             "line": 5,
@@ -35,7 +35,7 @@
           },
           {
             "result": {
-              "duration": 6638620,
+              "duration": 6565026,
               "status": "passed"
             },
             "line": 6,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 361550019,
+              "duration": 360941384,
               "status": "passed"
             },
             "line": 7,
@@ -75,7 +75,7 @@
           },
           {
             "result": {
-              "duration": 119039064,
+              "duration": 150463749,
               "status": "passed"
             },
             "line": 10,
@@ -87,7 +87,7 @@
           },
           {
             "result": {
-              "duration": 11908040095,
+              "duration": 17260465191,
               "status": "passed"
             },
             "line": 11,
@@ -109,8 +109,9 @@
         "steps": [
           {
             "result": {
-              "duration": 21149251813,
-              "status": "passed"
+              "duration": 26741748979,
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[text()\u003d\u0027Marketplace\u0027]\"}\n  (Session info: chrome\u003d84.0.4147.135)\n  (Driver info: chromedriver\u003d2.44.609545 (c2f88692e98ce7233d2df7c724465ecacfe74df5),platform\u003dMac OS X 10.13.6 x86_64) (WARNING: The server did not provide any stacktrace information)\nCommand duration or timeout: 0 milliseconds\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027Sathish.local\u0027, ip: \u00272409:4065:41d:77dc:157e:cc39:a8e8:5747%en0\u0027, os.name: \u0027Mac OS X\u0027, os.arch: \u0027x86_64\u0027, os.version: \u002710.13.6\u0027, java.version: \u002710.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.44.609545 (c2f88692e98ce7..., userDataDir: /var/folders/k7/rp8r07gn3gn...}, cssSelectorsEnabled: true, databaseEnabled: false, goog:chromeOptions: {debuggerAddress: localhost:62658}, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: ignore, unhandledPromptBehavior: ignore, version: 84.0.4147.135, webStorageEnabled: true}\nSession ID: e9cdf7dab9e07b0bfb20d18984f602f4\n*** Element info: {Using\u003dxpath, value\u003d//span[text()\u003d\u0027Marketplace\u0027]}\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:488)\n\tat org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:214)\n\tat org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:166)\n\tat org.openqa.selenium.remote.http.JsonHttpResponseCodec.reconstructValue(JsonHttpResponseCodec.java:40)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:80)\n\tat org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttpResponseCodec.java:44)\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\n\tat StepDefinitions.MenuStepDefinition.the_title_of_page_is(MenuStepDefinition.java:99)\n\tat ✽.When the title of page is(src/test/java/Features/login.feature:17)\n",
+              "status": "failed"
             },
             "line": 17,
             "name": "the title of page is",
@@ -144,8 +145,7 @@
           },
           {
             "result": {
-              "duration": 47621,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 21,
             "name": "close the browser",
@@ -171,7 +171,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2046548837,
+              "duration": 1699917066,
               "status": "passed"
             },
             "line": 4,
@@ -183,7 +183,7 @@
           },
           {
             "result": {
-              "duration": 5692177156,
+              "duration": 9971449493,
               "status": "passed"
             },
             "line": 5,
@@ -195,7 +195,7 @@
           },
           {
             "result": {
-              "duration": 5681135,
+              "duration": 5334619,
               "status": "passed"
             },
             "line": 6,
@@ -207,7 +207,7 @@
           },
           {
             "result": {
-              "duration": 297137182,
+              "duration": 319722400,
               "status": "passed"
             },
             "line": 7,
@@ -235,7 +235,7 @@
           },
           {
             "result": {
-              "duration": 93613288,
+              "duration": 131561487,
               "status": "passed"
             },
             "line": 10,
@@ -247,7 +247,7 @@
           },
           {
             "result": {
-              "duration": 12321632763,
+              "duration": 22850744594,
               "status": "passed"
             },
             "line": 11,
@@ -269,7 +269,7 @@
         "steps": [
           {
             "result": {
-              "duration": 567809636,
+              "duration": 491010723,
               "status": "passed"
             },
             "line": 26,
@@ -281,7 +281,7 @@
           },
           {
             "result": {
-              "duration": 5352564740,
+              "duration": 2708267788,
               "status": "passed"
             },
             "line": 27,
@@ -293,7 +293,7 @@
           },
           {
             "result": {
-              "duration": 30545,
+              "duration": 238464867,
               "status": "passed"
             },
             "line": 28,
