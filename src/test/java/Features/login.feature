@@ -1,26 +1,26 @@
-Feature: Facebook Login
+Feature: Facebook Check Title and New Page button
 
 Background: User is logged in
 Given initiate
 Given user is already on login page
 When title of the login page is Facebook - log in or sign up
 Then username and password entered
-|	username				|	password	|
-|	saurav3046@ymail.com	|	max10000@	|
+|	username					|	password	|
+|	sampletest90998@gmail.com	|	Abc123@#	|
 Then user clicks submit
 When user is on home page
 
 
-@thistag
+@include
 Scenario: Facebook Scenario1
 
 When the title of page is
 |id				|title					|
 |Messenger		|Messenger				|
-|Friends		|Friends				|
+|Pages			|Discover				|
 Then close the browser
 
-@thistag
+@include
 Scenario: Facebook Scenario2
 
 When clicked on pages

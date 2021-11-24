@@ -23,22 +23,11 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import junit.framework.Assert;
 
-public class MenuStepDefinition {
-	
-	public WebDriver driver;
+public class MenuStepDefinition extends FbBase {
 	
 	@Given("^initiate$")
 	public void initiate() throws Throwable {
-
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/drivers/chromedriver");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-notifications");
-		driver=new ChromeDriver(options);
-		
-		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(500, TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
-	
+		initialize();
 	}
 	
 	@Given("^user is already on login page$")
@@ -84,7 +73,7 @@ public class MenuStepDefinition {
 		Assert.assertTrue(title.contains("Facebook"));
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver; 
-		driver.findElement(By.xpath("//span[text()='See More']")).click();
+		driver.findElement(By.xpath("//span[text()='See more']")).click();
 		Thread.sleep(2000);
 	}
 	
@@ -92,6 +81,9 @@ public class MenuStepDefinition {
 	public void the_title_of_page_is(DataTable dt) throws Throwable {
 		for(Map<String,String> data : dt.asMaps(String.class, String.class))
 		{
+			WebDriverWait wait=new WebDriverWait(driver,50);
+			wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='"+data.get("id")+"']")));
+			
 			driver.findElement(By.xpath("//span[text()='"+data.get("id")+"']")).click();
 			
 			System.out.println("Title is = "+driver.getTitle());
@@ -129,7 +121,7 @@ public class MenuStepDefinition {
 	
 	@When("^name is available$")
 	public void name_is_available() throws Throwable {
-		Assert.assertTrue(driver.getPageSource().contains("Saurav Ghosh"));
+		Assert.assertTrue(driver.getPageSource().contains("MySample FancyTest"));
 	}
 	
 	@Then("^close the browser$")
