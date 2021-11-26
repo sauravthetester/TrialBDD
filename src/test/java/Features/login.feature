@@ -24,5 +24,5 @@ Then close the browser
 Scenario: Facebook Scenario2
 
 When clicked on pages
-And create new page button is available
+And URL contains text - page
 Then close the browser

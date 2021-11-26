@@ -8,12 +8,13 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import Util.TestUtil;
+import BDDUtil.*;
 
 public class FbBase {
 	public static WebDriver driver;
@@ -62,8 +63,10 @@ public class FbBase {
 			System.out.println(System.getProperty("user.dir"));
 			if(browser.equalsIgnoreCase("chrome"))
 	        {
+				ChromeOptions options = new ChromeOptions();
+				options.addArguments("--disable-notifications");
 	            System.setProperty("webdriver.chrome.driver", "driversWin//chromedriver.exe");
-	            driver=new ChromeDriver();
+	            driver=new ChromeDriver(options);
 	        }
 	        else if(browser.equalsIgnoreCase("firefox"))
 	        {
@@ -76,14 +79,14 @@ public class FbBase {
 	        	DesiredCapabilities capabilities = new DesiredCapabilities();
 	        	capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
 	            
-	            driver=new FirefoxDriver(capabilities);
+//	            driver=new FirefoxDriver(capabilities);
 	        }
 		}
         
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
-        driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
-        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
+//        driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);
+//        driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT, TimeUnit.SECONDS);
         
         
         driver.get(prop.getProperty("url"));

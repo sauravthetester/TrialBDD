@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="56.995095">
+    <testcase classname="Facebook Check Title and New Page button" name="Facebook Scenario1" time="30.110517">
+        <system-out>
+            <![CDATA[Given initiate..............................................................passed
+Given user is already on login page.........................................passed
+When title of the login page is Facebook - log in or sign up................passed
+Then username and password entered..........................................passed
+Then user clicks submit.....................................................passed
+When user is on home page...................................................passed
+When the title of page is...................................................passed
+Then close the browser......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Facebook Check Title and New Page button" name="Facebook Scenario2" time="13.638044">
+        <system-out>
+            <![CDATA[Given initiate..............................................................passed
+Given user is already on login page.........................................passed
+When title of the login page is Facebook - log in or sign up................passed
+Then username and password entered..........................................passed
+Then user clicks submit.....................................................passed
+When user is on home page...................................................passed
+When clicked on pages.......................................................passed
+And URL contains text - page................................................passed
+Then close the browser......................................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Facebook Check Name is available" name="Facebook Scenario3" time="13.246534">
+        <system-out>
+            <![CDATA[Given initiate..............................................................passed
+Given user is already on login page.........................................passed
+When title of the login page is Facebook - log in or sign up................passed
+Then username and password entered..........................................passed
+Then user clicks submit.....................................................passed
+When user is on home page...................................................passed
+When name is available......................................................passed
+Then close the browser......................................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

@@ -58,8 +58,7 @@ public class MenuStepDefinition extends FbBase {
 
 	@Then("^user clicks submit$")
 	public void user_clicks_submit()  {
-		
-		driver.findElement(By.id("u_0_b")).click();
+		driver.findElement(By.name("login")).click();
 	}
 	
 	@When("^user is on home page$")
@@ -67,6 +66,7 @@ public class MenuStepDefinition extends FbBase {
 	{
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//div[@aria-label='Account']"))));
+		
 		
 		String title = driver.getTitle();
 		System.out.println("Title of home page = "+title);
@@ -113,10 +113,10 @@ public class MenuStepDefinition extends FbBase {
 		driver.findElement(By.xpath("//span[text()='Pages']")).click();
 	}
 
-	@When("^create new page button is available$")
+	@When("^URL contains text - page$")
 	public void create_new_page_button_is_available() throws Throwable {
-		driver.findElement(By.xpath("//a[@aria-label='Create New Page']")).isDisplayed();
-		
+		String strUrl = driver.getCurrentUrl();
+		Assert.assertTrue(strUrl.contains("page"));
 	}
 	
 	@When("^name is available$")
