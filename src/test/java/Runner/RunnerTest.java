@@ -15,7 +15,7 @@ import cucumber.api.junit.Cucumber;
 			dryRun = false, //to check the mapping is proper between feature file and step def file
 			tags = {"@include"}			
 			)
-
+//This is runner class
 public class RunnerTest {
 
 }
