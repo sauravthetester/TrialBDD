@@ -117,6 +117,7 @@ public class MenuStepDefinition extends FbBase {
 	public void create_new_page_button_is_available() throws Throwable {
 		String strUrl = driver.getCurrentUrl();
 		Assert.assertTrue(strUrl.contains("page"));
+		System.out.println("Assertion inserted");
 	}
 	
 	@When("^name is available$")
